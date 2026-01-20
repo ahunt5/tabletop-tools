@@ -6,7 +6,9 @@
  * @returns {boolean} whether the wizard can cast the spell
  */
 function canCastSpell(isSpellPrepared, hasScroll) {
-  // TODO
+  if (isSpellPrepared || hasScroll) {
+    return true;
+  } else return false;
 }
 
 /**
@@ -115,7 +117,6 @@ function getRemainingHp(maxHp, currentHp, damage) {
 function canSee(light, vision) {
   // TODO
 }
-
 /**
  * A strike deals damage if it hits, unless the strike is a critical hit,
  * in which case it deals double damage.
