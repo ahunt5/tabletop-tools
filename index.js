@@ -155,4 +155,9 @@ function canSee(light, vision) {
  */
 function getStrikeDamage(attack, ac, damage) {
   // TODO
+  if (doesStrikeHit(attack, ac)) {
+    if (doesStrikeCrit(attack, ac)) return getRemainingHp / 2;
+  } else {
+    return 0;
+  }
 }
