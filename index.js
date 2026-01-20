@@ -83,6 +83,11 @@ function heal(maxHp, currentHp, healAmount) {
  */
 function getProficiencyBonus(level, rank) {
   // TODO
+  if (rank === "legendary") return level + 8;
+  else if (rank === "master") return level + 6;
+  else if (rank === "expert") return level + 4;
+  else if (rank === "trained") return level + 2;
+  else return 0;
 }
 
 /**
